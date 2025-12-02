@@ -1,0 +1,68 @@
+<!-- src/common/navbar.html -->
+<style>
+    .navbar {
+        background: #3A208F;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .logo-section {
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    .nav-links a {
+        position: relative;
+        transition: opacity 0.3s ease;
+    }
+
+    .nav-links a::after {
+        content: '';
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background-color: white;
+        transition: width 0.3s ease;
+    }
+
+    .nav-links a:hover::after {
+        width: 100%;
+    }
+
+    @media (max-width: 768px) {
+        .navbar {
+            flex-direction: column;
+        }
+        
+        .nav-links {
+            flex-direction: column;
+            width: 100%;
+            margin-left: 0 !important;
+            gap: 0 !important;
+        }
+        
+        .nav-links li {
+            width: 100%;
+            text-align: center;
+        }
+    }
+</style>
+
+<nav class="navbar">
+    <div class="flex items-center">
+        <div class="logo-section px-8 py-5">
+            <a href="/src/index.html" class="flex items-center gap-2 text-white text-2xl font-bold">
+                <div class="w-10 h-10 border-3 border-white rounded-full flex items-center justify-center text-xl">
+                    🚗
+                </div>
+                COVOI+
+            </a>
+        </div>
+        <ul class="nav-links flex gap-12 ml-12 text-white">
+            <li><a href="#nouveau-trajet" class="inline-block py-6 hover:opacity-80">nouveau trajet</a></li>
+            <li><a href="#historique" class="inline-block py-6 hover:opacity-80">historique</a></li>
+            <li><a href="#simulateur" class="inline-block py-6 hover:opacity-80">simulateur</a></li>
+            <li><a href="#remboursement" class="inline-block py-6 hover:opacity-80">remboursement</a></li>
+        </ul>
+    </div>
+</nav>

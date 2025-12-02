@@ -1,14 +1,42 @@
 <!doctype html>
-<html>
-  <head>
+<html lang="fr">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- On relie le CSS généré par Tailwind -->
+    <title>COVOI+ - Covoiturage intelligent</title>
     <link href="./output.css" rel="stylesheet">
-  </head>
-  <body>
-    <h1 class="text-3xl font-bold underline">
-      Hello world!
-    </h1>
-  </body>
+</head>
+<body class="flex flex-col min-h-screen">
+    <!-- NAVBAR - Chargée automatiquement -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- CONTENU PRINCIPAL -->
+    <main class="flex-grow">
+        Mettre ton body
+    </main>
+
+    <!-- FOOTER - Chargé automatiquement -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Script pour charger navbar et footer -->
+    <script>
+        async function loadComponent(file, elementId) {
+            try {
+                const response = await fetch(file);
+                if (!response.ok) {
+                    throw new Error(`Erreur lors du chargement de ${file}`);
+                }
+                const html = await response.text();
+                document.getElementById(elementId).innerHTML = html;
+            } catch (error) {
+                console.error('Erreur:', error);
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            loadComponent('./common/navbar.html', 'navbar-placeholder');
+            loadComponent('./common/footer.html', 'footer-placeholder');
+        });
+    </script>
+</body>
 </html>
