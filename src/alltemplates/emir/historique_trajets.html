@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historique des Trajets - COVOI+</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="min-h-screen flex flex-col bg-white">
+    <!-- NAVBAR -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- MAIN CONTENT -->
+    <main class="flex-grow flex justify-center items-start px-5 py-10">
+        <div class="w-full max-w-4xl bg-white rounded-3xl p-10 shadow-lg">
+            <!-- Header -->
+            <div class="text-center mb-6">
+                <h1 class="text-2xl font-bold text-gray-900 mb-1">Historique des Transactions</h1>
+                <p class="text-xs text-gray-500">Vos transactions récentes</p>
+            </div>
+
+            <!-- Balance Section -->
+            <div class="bg-violet-100 rounded-2xl p-6 text-center mb-5 border border-violet-200">
+                <div class="text-xs text-gray-600 mb-2">Solde actuel</div>
+                <div class="text-4xl font-extrabold text-green-500">+1280 TND</div>
+            </div>
+
+            <!-- Search Bar -->
+            <div class="mb-5">
+                <input 
+                    type="text" 
+                    placeholder="Rechercher une transaction" 
+                    class="w-full bg-gray-50 rounded-xl px-6 py-4 text-sm outline-none border border-gray-200 focus:border-violet-400 transition-colors"
+                >
+            </div>
+
+            <!-- Transaction Table -->
+            <div class="rounded-lg overflow-hidden">
+                <table class="w-full border-collapse">
+                    <thead>
+                        <tr class="bg-violet-700">
+                            <th class="text-white text-xs font-semibold text-left px-5 py-4">Date</th>
+                            <th class="text-white text-xs font-semibold text-left px-5 py-4">Description</th>
+                            <th class="text-white text-xs font-semibold text-left px-5 py-4">Type</th>
+                            <th class="text-white text-xs font-semibold text-left px-5 py-4">Montant</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="bg-white hover:bg-gray-50">
+                            <td class="px-5 py-4 text-xs text-gray-700">12 Nov 2023</td>
+                            <td class="px-5 py-4 text-xs text-gray-700">Trajet Covoiturage Tunis - Ariana</td>
+                            <td class="px-5 py-4 text-xs text-gray-700">Trajet complet</td>
+                            <td class="px-5 py-4 text-xs font-semibold text-red-500">-3.86 TND</td>
+                        </tr>
+                        <tr class="bg-violet-50 hover:bg-violet-100">
+                            <td class="px-5 py-4 text-xs text-gray-700">10 Nov 2023</td>
+                            <td class="px-5 py-4 text-xs text-gray-700">Remboursement - Annulation trajet</td>
+                            <td class="px-5 py-4 text-xs text-gray-700">Remboursement partiel</td>
+                            <td class="px-5 py-4 text-xs font-bold text-green-500">+12.80 TND</td>
+                        </tr>
+                        <tr class="bg-white hover:bg-gray-50">
+                            <td class="px-5 py-4 text-xs text-gray-700">08 Nov 2023</td>
+                            <td class="px-5 py-4 text-xs text-gray-700">Trajet Covoiturage La Marsa - Centre ville</td>
+                            <td class="px-5 py-4 text-xs text-gray-700">Trajet partagé</td>
+                            <td class="px-5 py-4 text-xs font-semibold text-red-500">-4.20 TND</td>
+                        </tr>
+                        <tr class="bg-violet-50 hover:bg-violet-100">
+                            <td class="px-5 py-4 text-xs text-gray-700">05 Nov 2023</td>
+                            <td class="px-5 py-4 text-xs text-gray-700">Achat - Paiement en ligne</td>
+                            <td class="px-5 py-4 text-xs text-gray-700">Transaction e-commerce</td>
+                            <td class="px-5 py-4 text-xs font-semibold text-red-500">-45.00 TND</td>
+                        </tr>
+                        <tr class="bg-white hover:bg-gray-50">
+                            <td class="px-5 py-4 text-xs text-gray-700">02 Nov 2023</td>
+                            <td class="px-5 py-4 text-xs text-gray-700">Trajet Covoiturage Ben Arous - Tunis</td>
+                            <td class="px-5 py-4 text-xs text-gray-700">Trajet matinal</td>
+                            <td class="px-5 py-4 text-xs font-semibold text-red-500">-3.50 TND</td>
+                        </tr>
+                        <tr class="bg-violet-50 hover:bg-violet-100">
+                            <td class="px-5 py-4 text-xs text-gray-700">01 Nov 2023</td>
+                            <td class="px-5 py-4 text-xs text-gray-700">Restaurant Le Gourmet</td>
+                            <td class="px-5 py-4 text-xs text-gray-700">Paiement restaurant</td>
+                            <td class="px-5 py-4 text-xs font-semibold text-red-500">-28.00 TND</td>
+                        </tr>
+                        <tr class="bg-white hover:bg-gray-50">
+                            <td class="px-5 py-4 text-xs text-gray-700">30 Oct 2023</td>
+                            <td class="px-5 py-4 text-xs text-gray-700">Supermarché Carrefour</td>
+                            <td class="px-5 py-4 text-xs text-gray-700">Courses alimentaires</td>
+                            <td class="px-5 py-4 text-xs font-semibold text-red-500">-65.50 TND</td>
+                        </tr>
+                        <tr class="bg-violet-50 hover:bg-violet-100">
+                            <td class="px-5 py-4 text-xs text-gray-700">28 Oct 2023</td>
+                            <td class="px-5 py-4 text-xs text-gray-700">Recharge compte</td>
+                            <td class="px-5 py-4 text-xs text-gray-700">Virement bancaire</td>
+                            <td class="px-5 py-4 text-xs font-bold text-green-500">+200.00 TND</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <div id="footer-placeholder"></div>
+
+    <script>
+        async function loadComponent(file, elementId) {
+            try {
+                const response = await fetch(file);
+                if (!response.ok) {
+                    throw new Error(`HTTP ${response.status}`);
+                }
+                const html = await response.text();
+                document.getElementById(elementId).innerHTML = html;
+            } catch (error) {
+                console.error('Error loading component:', error);
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            loadComponent('../../common/navbar.html', 'navbar-placeholder');
+            loadComponent('../../common/footer.html', 'footer-placeholder');
+        });
+    </script>
+</body>
+</html>

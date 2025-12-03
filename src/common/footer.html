@@ -3,271 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Footer COVOI+</title>
+    <title>COVOI+ Footer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Arial, sans-serif;
-        }
-        
-        /* STYLES DU FOOTER SEULEMENT */
-        .covoi-footer {
-            background: #3A208F;
-            color: white;
-            padding: 40px 0 20px;
-            width: 100%;
-        }
-        
-        .footer-container {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 0 15px;
-        }
-        
-        /* Section principale - 4 colonnes */
-        .footer-grid {
-            display: grid;
-            grid-template-columns: 1.5fr 1fr 1fr 1fr;
-            gap: 30px;
-            margin-bottom: 30px;
-            padding-bottom: 30px;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.15);
-        }
-        
-        /* Logo et description */
-        .footer-brand h2 {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-size: 24px;
-            margin-bottom: 15px;
-        }
-        
-        .logo-icon {
-            width: 40px;
-            height: 40px;
-            border: 2px solid white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 18px;
-        }
-        
-        .footer-brand p {
-            color: rgba(255, 255, 255, 0.8);
-            font-size: 14px;
-            line-height: 1.5;
-            margin-bottom: 20px;
-        }
-        
-        /* Réseaux sociaux */
-        .social-media {
-            display: flex;
-            gap: 12px;
-        }
-        
-        .social-icon {
-            width: 36px;
-            height: 36px;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            text-decoration: none;
-            transition: all 0.3s ease;
-        }
-        
-        .social-icon:hover {
-            background: rgba(255, 255, 255, 0.2);
-            transform: translateY(-3px);
-        }
-        
-        /* Colonnes de liens */
-        .footer-column h3 {
-            font-size: 16px;
-            font-weight: 600;
-            margin-bottom: 20px;
-            color: white;
-        }
-        
-        .footer-links {
-            list-style: none;
-        }
-        
-        .footer-links li {
-            margin-bottom: 10px;
-        }
-        
-        .footer-links a {
-            color: rgba(255, 255, 255, 0.8);
-            text-decoration: none;
-            font-size: 14px;
-            transition: all 0.3s ease;
-        }
-        
-        .footer-links a:hover {
-            color: white;
-            padding-left: 5px;
-        }
-        
-        /* Section "Contactez-nous" */
-        .contact-info {
-            color: rgba(255, 255, 255, 0.8);
-            font-size: 14px;
-            line-height: 1.6;
-        }
-        
-        .contact-info p {
-            margin-bottom: 10px;
-        }
-        
-        .contact-info i {
-            margin-right: 8px;
-            width: 16px;
-            text-align: center;
-        }
-        
-        /* Bas du footer */
-        .footer-bottom {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 15px;
-        }
-        
-        .copyright {
-            font-size: 13px;
-            color: rgba(255, 255, 255, 0.6);
-        }
-        
-        .footer-legal {
-            display: flex;
-            gap: 20px;
-        }
-        
-        .footer-legal a {
-            color: rgba(255, 255, 255, 0.6);
-            text-decoration: none;
-            font-size: 13px;
-            transition: color 0.3s ease;
-        }
-        
-        .footer-legal a:hover {
-            color: white;
-        }
-        
-        /* Responsive */
-        @media (max-width: 900px) {
-            .footer-grid {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 30px;
-            }
-        }
-        
-        @media (max-width: 600px) {
-            .footer-grid {
-                grid-template-columns: 1fr;
-                gap: 25px;
-            }
-            
-            .footer-bottom {
-                flex-direction: column;
-                text-align: center;
-            }
-            
-            .covoi-footer {
-                padding: 30px 0 20px;
-            }
-        }
-    </style>
 </head>
 <body>
-    <!-- FOOTER SEULEMENT -->
-    <footer class="covoi-footer">
-        <div class="footer-container">
-            <!-- Section principale -->
-            <div class="footer-grid">
-                <!-- Colonne 1: Logo et description -->
-                <div class="footer-brand">
-                    <h2>
-                        <div class="logo-icon">🚗</div>
-                        COVOI+
-                    </h2>
-                    <p>
-                        La plateforme intelligente de covoiturage avec gestion automatique 
-                        des frais et remboursements. Simplifiez vos trajets partagés.
+    <footer class="bg-[#3A208F] text-white py-12">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <!-- Colonne 1 - Logo et réseaux sociaux -->
+                <div>
+                    <div class="flex items-center gap-2 mb-6">
+                        <div class="w-10 h-10 border-2 border-white rounded-full flex items-center justify-center text-2xl">
+                            🚗
+                        </div>
+                        <span class="text-2xl font-bold">COVOI+</span>
+                    </div>
+                    <p class="text-sm opacity-90 mb-4">
+                        La plateforme intelligente de covoiturage avec gestion automatique des remboursements
                     </p>
-                    <div class="social-media">
-                        <a href="#" class="social-icon" aria-label="Facebook">
-                            <i class="fab fa-facebook-f"></i>
+                    <div class="flex gap-4">
+                        <a href="#" class="w-8 h-8 bg-white bg-opacity-20 rounded-full flex items-center justify-center hover:bg-opacity-30 transition-all duration-300">
+                            <i class="fab fa-facebook-f text-sm"></i>
                         </a>
-                        <a href="#" class="social-icon" aria-label="Twitter">
-                            <i class="fab fa-twitter"></i>
+                        <a href="#" class="w-8 h-8 bg-white bg-opacity-20 rounded-full flex items-center justify-center hover:bg-opacity-30 transition-all duration-300">
+                            <i class="fab fa-twitter text-sm"></i>
                         </a>
-                        <a href="#" class="social-icon" aria-label="Instagram">
-                            <i class="fab fa-instagram"></i>
+                        <a href="#" class="w-8 h-8 bg-white bg-opacity-20 rounded-full flex items-center justify-center hover:bg-opacity-30 transition-all duration-300">
+                            <i class="fab fa-instagram text-sm"></i>
                         </a>
-                        <a href="#" class="social-icon" aria-label="LinkedIn">
-                            <i class="fab fa-linkedin-in"></i>
+                        <a href="#" class="w-8 h-8 bg-white bg-opacity-20 rounded-full flex items-center justify-center hover:bg-opacity-30 transition-all duration-300">
+                            <i class="fab fa-linkedin-in text-sm"></i>
                         </a>
                     </div>
                 </div>
                 
-                <!-- Colonne 2: Fonctionnalités -->
-                <div class="footer-column">
-                    <h3>Fonctionnalités</h3>
-                    <ul class="footer-links">
-                        <li><a href="#nouveau-trajet">Nouveau trajet</a></li>
-                        <li><a href="#historique">Historique</a></li>
-                        <li><a href="#simulateur">Simulateur</a></li>
-                        <li><a href="#remboursement">Remboursement</a></li>
-                        <li><a href="#messages">Messages</a></li>
-                        <li><a href="#mes-trajets">Mes trajets</a></li>
+                <!-- Colonne 2 - Fonctionnalités -->
+                <div>
+                    <h3 class="font-semibold text-lg mb-4">Fonctionnalités</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#nouveau-trajet" class="hover:opacity-80 transition duration-300 block">Nouveau trajet</a></li>
+                        <li><a href="#historique" class="hover:opacity-80 transition duration-300 block">Historique</a></li>
+                        <li><a href="#simulateur" class="hover:opacity-80 transition duration-300 block">Simulateur</a></li>
+                        <li><a href="#remboursement" class="hover:opacity-80 transition duration-300 block">Remboursement</a></li>
+                        <li><a href="#messages" class="hover:opacity-80 transition duration-300 block">Messages</a></li>
+                        <li><a href="#mes-trajets" class="hover:opacity-80 transition duration-300 block">Mes trajets</a></li>
                     </ul>
                 </div>
                 
-                <!-- Colonne 3: Ressources -->
-                <div class="footer-column">
-                    <h3>Ressources</h3>
-                    <ul class="footer-links">
-                        <li><a href="#">Guide d'utilisation</a></li>
-                        <li><a href="#">FAQ</a></li>
-                        <li><a href="#">Tutoriels</a></li>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">Support</a></li>
-                        <li><a href="#">Téléchargements</a></li>
+                <!-- Colonne 3 - Ressources -->
+                <div>
+                    <h3 class="font-semibold text-lg mb-4">Ressources</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="hover:opacity-80 transition duration-300 block">Guide d'utilisation</a></li>
+                        <li><a href="#" class="hover:opacity-80 transition duration-300 block">FAQ</a></li>
+                        <li><a href="#" class="hover:opacity-80 transition duration-300 block">Tutoriels vidéo</a></li>
+                        <li><a href="#" class="hover:opacity-80 transition duration-300 block">Blog</a></li>
+                        <li><a href="#" class="hover:opacity-80 transition duration-300 block">Support technique</a></li>
                     </ul>
                 </div>
                 
-                <!-- Colonne 4: Contact -->
-                <div class="footer-column">
-                    <h3>Contactez-nous</h3>
-                    <div class="contact-info">
-                        <p><i class="fas fa-envelope"></i> contact@covoiplus.com</p>
-                        <p><i class="fas fa-phone"></i> +33 1 23 45 67 89</p>
-                        <p><i class="fas fa-map-marker-alt"></i> Paris, France</p>
-                        <p><i class="fas fa-clock"></i> Lun-Ven: 9h-18h</p>
-                    </div>
+                <!-- Colonne 4 - Légal -->
+                <div>
+                    <h3 class="font-semibold text-lg mb-4">Légal</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="hover:opacity-80 transition duration-300 block">À propos</a></li>
+                        <li><a href="#" class="hover:opacity-80 transition duration-300 block">Conditions d'utilisation</a></li>
+                        <li><a href="#" class="hover:opacity-80 transition duration-300 block">Politique de confidentialité</a></li>
+                        <li><a href="#" class="hover:opacity-80 transition duration-300 block">Mentions légales</a></li>
+                        <li><a href="#" class="hover:opacity-80 transition duration-300 block">Contact</a></li>
+                    </ul>
                 </div>
             </div>
             
-            <!-- Bas du footer -->
-            <div class="footer-bottom">
-                <div class="copyright">
-                    © 2024 COVOI+. Tous droits réservés.
-                </div>
-                <div class="footer-legal">
-                    <a href="#">Confidentialité</a>
-                    <a href="#">Conditions d'utilisation</a>
-                    <a href="#">Mentions légales</a>
-                    <a href="#">Cookies</a>
+            <!-- Ligne de séparation -->
+            <div class="border-t border-white border-opacity-20 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center text-sm opacity-80">
+                    <p>© 2024 COVOI+. Tous droits réservés.</p>
+                    <p class="mt-2 md:mt-0">Développé avec ❤️ par l'équipe COVOI+</p>
                 </div>
             </div>
         </div>
