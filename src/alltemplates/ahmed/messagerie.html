@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>COVOI+ - Chats récents</title>
+  <!-- Tailwind via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="flex flex-col min-h-screen bg-slate-50">
+  <!-- NAVBAR -->
+  <div id="navbar-placeholder"></div>
+
+  <!-- CONTENU PRINCIPAL -->
+  <main class="flex-grow">
+    <section class="max-w-6xl mx-auto px-4 py-10 md:py-16">
+      <!-- Titre + recherche -->
+      <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-6 mb-10">
+        <h1 class="text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight">
+          chats récents
+        </h1>
+
+        <!-- Zone recherche -->
+        <div class="flex items-center gap-3 text-sm text-slate-500">
+          <!-- Icône loupe -->
+          <div class="flex items-center justify-center w-9 h-9 rounded-full border border-slate-300">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-slate-500" fill="none"
+                 viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M21 21l-4.35-4.35M10.5 18a7.5 7.5 0 1 1 0-15 7.5 7.5 0 0 1 0 15z" />
+            </svg>
+          </div>
+          <div class="flex flex-col items-start md:items-end">
+            <span class="text-xs uppercase tracking-wide text-slate-400">search</span>
+            <input
+              type="text"
+              placeholder="Rechercher une conversation"
+              class="mt-1 w-52 md:w-64 border-b border-slate-300 bg-transparent text-sm outline-none focus:border-[#4921CA] placeholder:text-slate-400"
+            >
+          </div>
+        </div>
+      </div>
+
+      <!-- Filtres -->
+      <div class="flex flex-wrap items-center gap-3 mb-8">
+        <button
+          class="px-6 py-2 rounded-full bg-[#4921CA] text-white text-sm font-semibold shadow-md">
+          TOUS
+        </button>
+        <button
+          class="px-6 py-2 rounded-full bg-white text-slate-800 text-sm font-medium border border-slate-200 hover:border-[#4921CA] hover:text-[#4921CA] transition">
+          Personnes
+        </button>
+        <button
+          class="px-6 py-2 rounded-full bg-white text-slate-800 text-sm font-medium border border-slate-200 hover:border-[#4921CA] hover:text-[#4921CA] transition">
+          Conducteurs
+        </button>
+        <button
+          class="px-6 py-2 rounded-full bg-white text-slate-800 text-sm font-medium border border-slate-200 hover:border-[#4921CA] hover:text-[#4921CA] transition">
+          Passagers
+        </button>
+      </div>
+
+      <!-- Liste des chats -->
+      <div class="space-y-3">
+        <!-- Ligne 1 -->
+        <article class="flex items-center justify-between rounded-2xl bg-[#f5ecff] px-4 md:px-6 py-3 shadow-sm">
+          <div class="flex items-start gap-4">
+            <img
+              src="https://randomuser.me/api/portraits/women/65.jpg"
+              alt="salima ben salah"
+              class="w-10 h-10 md:w-11 md:h-11 rounded-full object-cover"
+            >
+            <div>
+              <h2 class="text-sm md:text-base font-semibold text-slate-900">
+                salima ben salah
+              </h2>
+              <p class="text-xs md:text-sm text-slate-600 mt-0.5">
+                mezel dispo covoiturage brass omek ?
+              </p>
+            </div>
+          </div>
+          <div class="flex flex-col items-end gap-2 pl-2">
+            <span class="text-xs text-slate-500">18:46</span>
+            <span class="flex items-center justify-center w-5 h-5 rounded-full bg-[#4921CA] text-white text-[10px]">
+              4
+            </span>
+          </div>
+          
+        </article>
+
+        <!-- Ligne 2 -->
+        <article class="flex items-center justify-between rounded-2xl bg-[#f5ecff] px-4 md:px-6 py-3 shadow-sm">
+          <div class="flex items-start gap-4">
+            <img
+              src="https://randomuser.me/api/portraits/men/32.jpg"
+              alt="abdou ben romdhan"
+              class="w-10 h-10 md:w-11 md:h-11 rounded-full object-cover"
+            >
+            <div>
+              <h2 class="text-sm md:text-base font-semibold text-slate-900">
+                abdou ben romdhan
+              </h2>
+              <p class="text-xs md:text-sm text-slate-600 mt-0.5">
+                aa bro ma 5alastnich rak fl covoiturage chbik t5ali fi vu sahbi
+              </p>
+            </div>
+          </div>
+          <div class="flex flex-col items-end gap-2 pl-2">
+            <span class="text-xs text-slate-500">18:48</span>
+          </div>
+        </article>
+
+        <!-- Ligne 3 (message non lu, puce bleue) -->
+        <article class="flex items-center justify-between rounded-2xl bg-[#f5ecff] px-4 md:px-6 py-3 shadow-sm">
+          <div class="flex items-start gap-4">
+            <img
+              src="https://randomuser.me/api/portraits/women/44.jpg"
+              alt="sirine abdelenebi"
+              class="w-10 h-10 md:w-11 md:h-11 rounded-full object-cover"
+            >
+            <div>
+              <h2 class="text-sm md:text-base font-semibold text-slate-900">
+                sirine abdelenebi
+              </h2>
+              <p class="text-xs md:text-sm text-slate-600 mt-0.5">
+                salut beau gosse taameli covoiturage blech ?
+              </p>
+            </div>
+          </div>
+          <div class="flex flex-col items-end gap-2 pl-2">
+            <span class="text-xs text-slate-500">18:48</span>
+            <span class="flex items-center justify-center w-5 h-5 rounded-full bg-[#4921CA] text-white text-[10px]">
+              1
+            </span>
+          </div>
+        </article>
+
+        <!-- Ligne 4 -->
+        <article class="flex items-center justify-between rounded-2xl bg-[#f5ecff] px-4 md:px-6 py-3 shadow-sm">
+          <div class="flex items-start gap-4">
+            <img
+              src="https://randomuser.me/api/portraits/men/88.jpg"
+              alt="souhail weld nabiha"
+              class="w-10 h-10 md:w-11 md:h-11 rounded-full object-cover"
+            >
+            <div>
+              <h2 class="text-sm md:text-base font-semibold text-slate-900">
+                souhail weld nabiha
+              </h2>
+              <p class="text-xs md:text-sm text-slate-600 mt-0.5">
+                aa ya gen heki lblonda taa covoiturage theb ala noumrouk 9atli 9olou mala ....
+              </p>
+            </div>
+          </div>
+          <div class="flex flex-col items-end gap-2 pl-2">
+            <span class="text-xs text-slate-500">15:04</span>
+          </div>
+        </article>
+
+        <!-- Ligne 5 -->
+        <article class="flex items-center justify-between rounded-2xl bg-[#f5ecff] px-4 md:px-6 py-3 shadow-sm">
+          <div class="flex items-start gap-4">
+            <img
+              src="https://randomuser.me/api/portraits/men/15.jpg"
+              alt="Mustapha Mustapha"
+              class="w-10 h-10 md:w-11 md:h-11 rounded-full object-cover"
+            >
+            <div>
+              <h2 class="text-sm md:text-base font-semibold text-slate-900">
+                Mustapha Mustapha
+              </h2>
+              <p class="text-xs md:text-sm text-slate-600 mt-0.5">
+                weldi ena bmw mtei tekel barcha mouch 3ajbek 20dt covoiturage tejem temchi ...
+              </p>
+            </div>
+          </div>
+          <div class="flex flex-col items-end gap-2 pl-2">
+            <span class="text-xs text-slate-500">14:39</span>
+            <span class="flex items-center justify-center w-5 h-5 rounded-full bg-[#4921CA] text-white text-[10px]">
+              5
+            </span>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <div id="footer-placeholder"></div>
+
+  <!-- Script pour charger navbar et footer -->
+  <script>
+    async function loadComponent(file, elementId) {
+      try {
+        const response = await fetch(file);
+        if (!response.ok) {
+          throw new Error("Erreur lors du chargement de " + file + " : " + response.status);
+        }
+        const html = await response.text();
+        const target = document.getElementById(elementId);
+        if (target) {
+          target.innerHTML = html;
+        }
+      } catch (error) {
+        console.error(error);
+      }
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      // depuis alltemplates/ahmed/ vers src/common/
+      loadComponent("../../common/navbar.html", "navbar-placeholder");
+      loadComponent("../../common/footer.html", "footer-placeholder");
+    });
+  </script>
+</body>
+</html>
