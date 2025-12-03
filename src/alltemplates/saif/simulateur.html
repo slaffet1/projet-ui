@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COVOI+ - Simulateur de Budget mensuel</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="flex flex-col min-h-screen bg-gray-50">
+    <!-- NAVBAR - Chargée automatiquement -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- CONTENU PRINCIPAL -->
+    <main class="flex-grow p-4 md:p-6">
+        <div class="max-w-3xl mx-auto"> 
+            <!-- Titre principal -->
+            <div class="mb-8 text-center">
+                <h1 class="text-4xl font-semibold text-gray-800 mb-2">Simulateur De Budget mensuel</h1>
+            </div>
+            
+
+            <!-- Carte principale -->
+            <div class="shadow-[0_4px_15px_rgba(0,0,0,0.08)] rounded-[12px] bg-[#8877E7] text-white p-8 min-h-[550px] flex flex-col"> <!-- Ajouté min-h-[550px] et flex flex-col -->
+                <h2 class="text-2xl font-semibold mb-8 text-left">Informations du mois</h2> 
+                
+                <div class="space-y-6 mb-8 flex-grow"> 
+                    <div>
+                        <div class="font-medium mb-2">Mois :</div> 
+                        <div>
+                            <div class="w-full p-4 rounded-lg bg-white/80 text-gray-900">
+                                novembre
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <div class="font-medium mb-2">Nombre total de trajets :</div> 
+                        <div>
+                            <div class="w-full p-4 rounded-lg bg-white/80 text-gray-900"> 
+                                12
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <div class="font-medium mb-2">Dépenses totales (TND) :</div>
+                        <div>
+                            <div class="w-full p-4 rounded-lg bg-white/80 text-gray-900">
+                                85
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Séparateur -->
+                <div class="my-8 border-t border-white/0"></div> 
+
+                <!-- Budget mensuel -->
+                <div class="text-center mb-8">
+                    <div class="inline-block bg-white text-gray-900 px-10 py-5 rounded-lg font-bold text-lg shadow-md"> <!-- px-8 à px-10, py-4 à py-5 -->
+                        Budget mensuel prévu : <span class="text-[#000000]">100 TND</span>
+                    </div>
+                </div>
+
+                <!-- Séparateur-->
+                <div class="my-8 border-t border-white/0"></div> 
+
+                <div class="flex justify-center gap-16 mt-8">
+    
+    <!-- Historique -->
+    <button class="bg-[#6E57F0] text-white font-semibold text-xl rounded-lg flex items-center justify-center hover:opacity-90 transition w-[270px] h-[67px] gap-4">
+        <i class="fas fa-history text-3xl"></i>
+        <span>Historique des trajets</span>
+    </button>
+
+    <!-- PDF -->
+    <button class="bg-[#6E57F0] text-white font-semibold text-xl rounded-lg flex items-center justify-center hover:opacity-90 transition w-[250px] h-[67px] gap-4">
+        <i class="fas fa-file-pdf text-3xl"></i>
+        <span>Exporter en PDF</span>
+    </button>
+
+</div>
+
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- FOOTER - Chargé automatiquement -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Script pour charger navbar et footer -->
+    <script>
+        async function loadComponent(file, elementId) {
+            try {
+                const response = await fetch(file);
+                if (!response.ok) {
+                    throw new Error(`Erreur lors du chargement de ${file}`);
+                }
+                const html = await response.text();
+                document.getElementById(elementId).innerHTML = html;
+            } catch (error) {
+                console.error('Erreur:', error);
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            loadComponent('../../common/navbar.html', 'navbar-placeholder');
+            loadComponent('../../common/footer.html', 'footer-placeholder');
+        });
+    </script>
+</body>
+</html>

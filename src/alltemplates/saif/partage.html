@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COVOI+ - Répartition des frais du trajet</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+
+<body class="min-h-screen bg-gray-50 flex flex-col">
+
+    <!-- NAVBAR -->
+    <div id="navbar-placeholder"></div>
+
+    <main class="flex-grow p-4 sm:p-6">
+
+        <!-- TITRE -->
+        <h1 class="text-center text-3xl sm:text-4xl font-semibold text-gray-800 mb-8 sm:mb-10">
+            Répartition des frais du trajet
+        </h1>
+
+        <!-- CONTAINER PRINCIPAL -->
+        <div class="mx-auto bg-[#8877E7] bg-opacity-80 p-6 sm:p-8 rounded-xl shadow-lg flex flex-col gap-6 sm:gap-8"
+             style="max-width: 970px; min-height: 1050px;">
+<div class="h-10"></div>
+            <!-- LISTE DES UTILISATEURS -->
+            <div class="space-y-4 sm:space-y-6">
+
+                <!-- USER 1 -->
+                <div class="flex flex-col sm:flex-row items-center sm:justify-between bg-white/80 rounded-lg p-4 gap-2 sm:gap-0">
+                    <div class="flex items-center gap-3">
+                        <img src="https://i.pravatar.cc/50?img=1" class="w-12 h-12 rounded-full">
+                        <span class="font-bold text-gray-800">Youssef</span>
+                    </div>
+
+                    <div class="flex items-center gap-2 mt-2 sm:mt-0">
+                        <span class="bg-white rounded-md text-gray-800 flex items-center justify-center border border-[#6E57F0]"
+                              style="width: 80px; height: 36px;">
+                            14
+                        </span>
+                        <span class="text-gray-700 font-semibold">TND</span>
+                    </div>
+                </div>
+
+                <!-- USER 2 -->
+                <div class="flex flex-col sm:flex-row items-center sm:justify-between bg-white/80 rounded-lg p-4 gap-2 sm:gap-0">
+                    <div class="flex items-center gap-3">
+                        <img src="https://i.pravatar.cc/50?img=2" class="w-12 h-12 rounded-full">
+                        <span class="font-bold text-gray-800">Saif</span>
+                    </div>
+
+                    <div class="flex items-center gap-2 mt-2 sm:mt-0">
+                        <span class="bg-white rounded-md text-gray-800 flex items-center justify-center border border-[#6E57F0]"
+                              style="width: 80px; height: 36px;">
+                            8
+                        </span>
+                        <span class="text-gray-700 font-semibold">TND</span>
+                    </div>
+                </div>
+
+                <!-- USER 3 -->
+                <div class="flex flex-col sm:flex-row items-center sm:justify-between bg-white/80 rounded-lg p-4 gap-2 sm:gap-0">
+                    <div class="flex items-center gap-3">
+                        <img src="https://i.pravatar.cc/50?img=3" class="w-12 h-12 rounded-full">
+                        <span class="font-bold text-gray-800">Amina</span>
+                    </div>
+
+                    <div class="flex items-center gap-2 mt-2 sm:mt-0">
+                        <span class="bg-white rounded-md text-gray-800 flex items-center justify-center border border-[#6E57F0]"
+                              style="width: 80px; height: 36px;">
+                            12
+                        </span>
+                        <span class="text-gray-700 font-semibold">TND</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- TOTAL DES FRAIS -->
+            <div class="mt-10 sm:mt-14 bg-[#5C43EB] text-white rounded-lg p-4 flex flex-col sm:flex-row justify-between items-center gap-2">
+                <span class="font-semibold text-lg">Total des frais:</span>
+                <span class="font-bold text-lg">34.00 TND</span>
+            </div>
+
+            <div class="h-20"></div>
+
+            <!-- MÉTHODE DE PAIEMENT -->
+            <div class="mt-10 bg-white rounded-xl p-4 sm:p-6">
+                <h3 class="text-[#6E57F0] font-bold mb-4 sm:mb-6 text-left">Méthode de paiement</h3>
+
+                <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+                    <!-- Espèces -->
+                    <div class="flex flex-col items-center justify-center border-2 border-[#DDDDDD] bg-white rounded-[10px] h-20 sm:h-14">
+                        <i class="fa-solid fa-money-bill text-xl mb-1 text-gray-700"></i>   
+                        <span class="text-gray-800 font-medium text-sm">Espèces</span>
+                    </div>
+
+                    <!-- Carte -->
+                    <div class="flex flex-col items-center justify-center border-2 border-[#DDDDDD] bg-white rounded-[10px] h-20 sm:h-14">
+                        <i class="fa-regular fa-credit-card text-xl mb-1 text-gray-700"></i>
+                        <span class="text-gray-800 font-medium text-sm">Carte Bancaire</span>
+                    </div>
+
+                    <!-- Flouci -->
+                    <div class="flex flex-col items-center justify-center border-2 border-[#DDDDDD] bg-white rounded-[10px] h-20 sm:h-14">
+                        <img src="../../assets/images/flouci.jpg" class="w-8 h-8 object-cover rounded-full mb-1">
+                        <span class="text-gray-800 font-medium text-sm">Flouci</span>
+                    </div>
+
+                    <!-- D17 -->
+                    <div class="flex flex-col items-center justify-center border-2 border-[#DDDDDD] bg-white rounded-[10px] h-20 sm:h-14">
+                        <img src="../../assets/images/d17.png" class="w-8 h-8 object-cover rounded-full mb-1">
+                        <span class="text-gray-800 font-medium text-sm">D17</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="h-10"></div>
+
+            <!-- BOUTON VALIDER -->
+            <div class="mt-6 sm:mt-10 text-center">
+                <button class="bg-[#6E57F0] text-white font-semibold py-3 px-8 sm:px-12 rounded-lg hover:opacity-90 transition">
+                    Valider
+                </button>
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- FOOTER -->
+    <div id="footer-placeholder"></div>
+
+    <script>
+        async function loadComponent(file, elementId) {
+            try {
+                const response = await fetch(file);
+                if (!response.ok) {
+                    throw new Error(`Erreur lors du chargement de ${file}`);
+                }
+                const html = await response.text();
+                document.getElementById(elementId).innerHTML = html;
+            } catch (error) {
+                console.error('Erreur:', error);
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            loadComponent('../../common/navbar.html', 'navbar-placeholder');
+            loadComponent('../../common/footer.html', 'footer-placeholder');
+        });
+    </script>
+
+</body>
+</html>
