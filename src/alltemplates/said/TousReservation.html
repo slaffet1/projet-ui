@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COVOI+ - Mes réservations</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="flex flex-col min-h-screen bg-gray-50 font-sans">
+    <!-- NAVBAR - Chargée automatiquement -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- CONTENU PRINCIPAL -->
+    <main class="flex-grow p-4 md:p-6">
+        <div class="max-w-7xl mx-auto">
+            <!-- Titre principal -->
+            <div class="mb-8">
+                <h1 class="text-3xl font-bold text-gray-800 mb-2">Mes réservations</h1>
+                <p class="text-gray-600">Gérez vos trajets à venir et consultez l'historique de vos réservations</p>
+            </div>
+
+            <!-- Section Trajet en cours -->
+            <div class="bg-[#5B3EBC] rounded-xl p-6 text-white mb-8">
+                <div class="flex justify-between items-start mb-4">
+                    <div>
+                        <h2 class="text-xl font-bold mb-1">Trajet en cours</h2>
+                        <p class="text-white/90">Votre conducteur est en route</p>
+                    </div>
+                </div>
+
+                <!-- Itinéraire avec rectangle #9E95CF -->
+                <div class="bg-[#9E95CF] rounded-lg p-5 mb-6 relative">
+                    <!-- Ligne verticale pour l'itinéraire -->
+                    <div class="absolute left-6 top-8 bottom-8 w-0.5 bg-white"></div>
+                    
+                    <!-- Point de départ -->
+                    <div class="flex items-center mb-6 relative">
+                        <div class="w-4 h-4 bg-green-500 rounded-full mr-4 z-10 relative"></div>
+                        <div>
+                            <p class="font-medium">LAC2 Tunis</p>
+                            <p class="text-sm text-white/80">Départ</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Point d'arrivée -->
+                    <div class="flex items-center relative">
+                        <div class="w-4 h-4 bg-red-500 rounded-full mr-4 z-10 relative"></div>
+                        <div>
+                            <p class="font-medium">Esprit El Ghazela</p>
+                            <p class="text-sm text-white/80">Arrivée</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Informations du conducteur -->
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center">
+                        <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center text-[#5B3EBC] text-2xl font-bold mr-4">
+                            AB
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-lg">Ahmed Bensalah</h3>
+                            <div class="flex items-center">
+                                <i class="fas fa-star text-yellow-400 mr-1"></i>
+                                <span>4.8/5</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="flex gap-3">
+                        <button class="bg-white text-[#5B3EBC] font-medium py-2 px-4 rounded-lg hover:bg-gray-100 transition">
+                            Suivre en direct
+                        </button>
+                        <button class="bg-[#3D9C10] text-white font-medium py-2 px-4 rounded-lg hover:opacity-90 transition">
+                            Contacter conducteur
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Onglets -->
+            <div class="flex mb-6">
+                <button class="bg-[#8E7AD1] text-white font-medium py-3 px-8 rounded-l-lg">
+                    À venir
+                </button>
+                <button class="bg-[#EAE5E5] text-[#8E7AD1] font-medium py-3 px-8 rounded-r-lg hover:bg-gray-200 transition">
+                    Historique
+                </button>
+            </div>
+
+            <!-- Réservation à venir -->
+            <div class="bg-white rounded-xl p-6 shadow-lg mb-6">
+                <div class="flex justify-between items-start mb-6">
+                    <!-- Info conducteur -->
+                    <div class="flex items-center">
+                        <div class="w-14 h-14 bg-purple-100 rounded-full flex items-center justify-center text-purple-600 text-xl mr-4">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-gray-800">Karim Trabelsi</h3>
+                            <div class="flex items-center">
+                                <i class="fas fa-star text-yellow-400 mr-1 text-sm"></i>
+                                <span class="text-gray-600 text-sm">4.6/5 • Renault Clio</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Badge Confirmé -->
+                    <div class="bg-[#90E861] text-[#3D9C10] font-medium py-1 px-4 rounded-full">
+                        Confirmé
+                    </div>
+                </div>
+
+                <!-- Trajet -->
+                <div class="mb-6">
+                    <h4 class="font-bold text-gray-800 mb-3">Tunis centre → Esprit El Ghazela</h4>
+                    
+                    <!-- Détails date/heure -->
+                    <div class="flex flex-wrap gap-4 mb-4">
+                        <div class="flex items-center text-gray-600">
+                            <i class="fas fa-calendar mr-2"></i>
+                            <span>15 Déc 2023</span>
+                        </div>
+                        <div class="flex items-center text-gray-600">
+                            <i class="fas fa-clock mr-2"></i>
+                            <span>08:30</span>
+                        </div>
+                        <div class="flex items-center text-[#E74C3C]">
+                            <i class="fas fa-user mr-2"></i>
+                            <span>1 place</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Boutons et prix -->
+                <div class="flex justify-between items-center">
+                    <div class="flex gap-3">
+                        <button class="bg-[#6E57F0] text-white font-medium py-2 px-6 rounded-lg hover:opacity-90 transition">
+                            Voir les détails
+                        </button>
+                        <button class="bg-[#9E95CF] text-white font-medium py-2 px-6 rounded-lg hover:opacity-90 transition">
+                            Annuler
+                        </button>
+                    </div>
+                    
+                    <div class="text-right">
+                        <p class="text-gray-600 text-sm">Prix</p>
+                        <p class="text-2xl font-bold text-gray-800">25 DT</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Deuxième réservation -->
+            <div class="bg-white rounded-xl p-6 shadow-lg">
+                <div class="flex justify-between items-start mb-6">
+                    <!-- Info conducteur -->
+                    <div class="flex items-center">
+                        <div class="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 text-xl mr-4">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-gray-800">Leila Gharbi</h3>
+                            <div class="flex items-center">
+                                <i class="fas fa-star text-yellow-400 mr-1 text-sm"></i>
+                                <span class="text-gray-600 text-sm">4.9/5 • Peugeot 208</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Badge Confirmé -->
+                    <div class="bg-[#90E861] text-[#3D9C10] font-medium py-1 px-4 rounded-full">
+                        Confirmé
+                    </div>
+                </div>
+
+                <!-- Trajet -->
+                <div class="mb-6">
+                    <h4 class="font-bold text-gray-800 mb-3">Lac 1 → Ariana</h4>
+                    
+                    <!-- Détails date/heure -->
+                    <div class="flex flex-wrap gap-4 mb-4">
+                        <div class="flex items-center text-gray-600">
+                            <i class="fas fa-calendar mr-2"></i>
+                            <span>18 Déc 2023</span>
+                        </div>
+                        <div class="flex items-center text-gray-600">
+                            <i class="fas fa-clock mr-2"></i>
+                            <span>14:15</span>
+                        </div>
+                        <div class="flex items-center text-[#E74C3C]">
+                            <i class="fas fa-user mr-2"></i>
+                            <span>2 places</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Boutons et prix -->
+                <div class="flex justify-between items-center">
+                    <div class="flex gap-3">
+                        <button class="bg-[#6E57F0] text-white font-medium py-2 px-6 rounded-lg hover:opacity-90 transition">
+                            Voir les détails
+                        </button>
+                        <button class="bg-[#9E95CF] text-white font-medium py-2 px-6 rounded-lg hover:opacity-90 transition">
+                            Annuler
+                        </button>
+                    </div>
+                    
+                    <div class="text-right">
+                        <p class="text-gray-600 text-sm">Prix</p>
+                        <p class="text-2xl font-bold text-gray-800">18 DT</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- FOOTER - Chargé automatiquement -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Script pour charger navbar et footer -->
+    <script>
+        async function loadComponent(file, elementId) {
+            try {
+                const response = await fetch(file);
+                if (!response.ok) {
+                    throw new Error(`Erreur lors du chargement de ${file}`);
+                }
+                const html = await response.text();
+                document.getElementById(elementId).innerHTML = html;
+            } catch (error) {
+                console.error('Erreur:', error);
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            loadComponent('../../common/navbar.html', 'navbar-placeholder');
+            loadComponent('../../common/footer.html', 'footer-placeholder');
+        });
+    </script>
+</body>
+</html>
