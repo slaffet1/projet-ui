@@ -69,7 +69,7 @@
                     </div>
                     
                     <div class="flex gap-3">
-                        <a  href = "./Trajetendirect.html" class="bg-white text-[#5B3EBC] font-medium py-2 px-4 rounded-lg hover:bg-gray-100 transition">
+                        <a href="./Trajetendirect.html" class="bg-white text-[#5B3EBC] font-medium py-2 px-4 rounded-lg hover:bg-gray-100 transition">
                             Suivre en direct
                         </a>
                         <button class="bg-[#3D9C10] text-white font-medium py-2 px-4 rounded-lg hover:opacity-90 transition">
@@ -79,136 +79,142 @@
                 </div>
             </div>
 
-            <!-- Onglets -->
+            <!-- Onglets séparés (même largeur que le box mais pas attachés) -->
             <div class="flex mb-6">
-                <button class="bg-[#8E7AD1] text-white font-medium py-3 px-8 rounded-l-lg">
+                <button class="flex-1 bg-[#8E7AD1] text-white font-medium py-3 rounded-l-lg hover:opacity-90 transition">
                     À venir
                 </button>
-                <button class="bg-[#EAE5E5] text-[#8E7AD1] font-medium py-3 px-8 rounded-r-lg hover:bg-gray-200 transition">
+                <button class="flex-1 bg-[#EAE5E5] text-[#8E7AD1] font-medium py-3 rounded-r-lg hover:bg-gray-200 transition">
                     Historique
                 </button>
             </div>
 
-            <!-- Réservation à venir -->
-            <div class="bg-white rounded-xl p-6 shadow-lg mb-6">
-                <div class="flex justify-between items-start mb-6">
-                    <!-- Info conducteur -->
-                    <div class="flex items-center">
-                        <div class="w-14 h-14 bg-purple-100 rounded-full flex items-center justify-center text-purple-600 text-xl mr-4">
-                            <i class="fas fa-user"></i>
+            <!-- Box des réservations (séparé des onglets) -->
+            <div class="bg-white rounded-xl shadow-lg p-6 mb-6">
+                <!-- Réservation à venir -->
+                <div class="mb-6">
+                    <div class="flex justify-between items-start mb-6">
+                        <!-- Info conducteur -->
+                        <div class="flex items-center">
+                            <div class="w-14 h-14 bg-purple-100 rounded-full flex items-center justify-center text-purple-600 text-xl mr-4">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-gray-800">Karim Trabelsi</h3>
+                                <div class="flex items-center">
+                                    <i class="fas fa-star text-yellow-400 mr-1 text-sm"></i>
+                                    <span class="text-gray-600 text-sm">4.6/5 • Renault Clio</span>
+                                </div>
+                            </div>
                         </div>
-                        <div>
-                            <h3 class="font-bold text-gray-800">Karim Trabelsi</h3>
-                            <div class="flex items-center">
-                                <i class="fas fa-star text-yellow-400 mr-1 text-sm"></i>
-                                <span class="text-gray-600 text-sm">4.6/5 • Renault Clio</span>
+                        
+                        <!-- Badge Confirmé -->
+                        <div class="bg-[#90E861] text-[#3D9C10] font-medium py-1 px-4 rounded-full">
+                            Confirmé
+                        </div>
+                    </div>
+
+                    <!-- Trajet -->
+                    <div class="mb-6">
+                        <h4 class="font-bold text-gray-800 mb-3">Tunis centre → Esprit El Ghazela</h4>
+                        
+                        <!-- Détails date/heure -->
+                        <div class="flex flex-wrap gap-4 mb-4">
+                            <div class="flex items-center text-gray-600">
+                                <i class="fas fa-calendar mr-2"></i>
+                                <span>15 Déc 2023</span>
+                            </div>
+                            <div class="flex items-center text-gray-600">
+                                <i class="fas fa-clock mr-2"></i>
+                                <span>08:30</span>
+                            </div>
+                            <div class="flex items-center text-[#E74C3C]">
+                                <i class="fas fa-user mr-2"></i>
+                                <span>1 place</span>
                             </div>
                         </div>
                     </div>
-                    
-                    <!-- Badge Confirmé -->
-                    <div class="bg-[#90E861] text-[#3D9C10] font-medium py-1 px-4 rounded-full">
-                        Confirmé
-                    </div>
-                </div>
 
-                <!-- Trajet -->
-                <div class="mb-6">
-                    <h4 class="font-bold text-gray-800 mb-3">Tunis centre → Esprit El Ghazela</h4>
-                    
-                    <!-- Détails date/heure -->
-                    <div class="flex flex-wrap gap-4 mb-4">
-                        <div class="flex items-center text-gray-600">
-                            <i class="fas fa-calendar mr-2"></i>
-                            <span>15 Déc 2023</span>
+                    <!-- Boutons et prix -->
+                    <div class="flex justify-between items-center">
+                        <div class="flex gap-3">
+                            <button class="bg-[#6E57F0] text-white font-medium py-2 px-6 rounded-lg hover:opacity-90 transition">
+                                Voir les détails
+                            </button>
+                            <a href="../../alltemplates/ahmed/annulation.html" class="bg-[#9E95CF] text-white font-medium py-2 px-6 rounded-lg hover:opacity-90 transition">
+                                Annuler
+                            </a>
                         </div>
-                        <div class="flex items-center text-gray-600">
-                            <i class="fas fa-clock mr-2"></i>
-                            <span>08:30</span>
-                        </div>
-                        <div class="flex items-center text-[#E74C3C]">
-                            <i class="fas fa-user mr-2"></i>
-                            <span>1 place</span>
+                        
+                        <div class="text-right">
+                            <p class="text-gray-600 text-sm">Prix</p>
+                            <p class="text-2xl font-bold text-gray-800">25 DT</p>
                         </div>
                     </div>
                 </div>
-
-                <!-- Boutons et prix -->
-                <div class="flex justify-between items-center">
-                    <div class="flex gap-3">
-                        <button class="bg-[#6E57F0] text-white font-medium py-2 px-6 rounded-lg hover:opacity-90 transition">
-                            Voir les détails
-                        </button>
-                        <a href="../../alltemplates/ahmed/annulation.html" class="bg-[#9E95CF] text-white font-medium py-2 px-6 rounded-lg hover:opacity-90 transition">
-    Annuler
-</a>
-               </div>
-                    
-                    <div class="text-right">
-                        <p class="text-gray-600 text-sm">Prix</p>
-                        <p class="text-2xl font-bold text-gray-800">25 DT</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Deuxième réservation -->
-            <div class="bg-white rounded-xl p-6 shadow-lg">
-                <div class="flex justify-between items-start mb-6">
-                    <!-- Info conducteur -->
-                    <div class="flex items-center">
-                        <div class="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 text-xl mr-4">
-                            <i class="fas fa-user"></i>
+                
+                <!-- Séparateur -->
+                <div class="border-t border-gray-200 my-6"></div>
+                
+                <!-- Deuxième réservation -->
+                <div>
+                    <div class="flex justify-between items-start mb-6">
+                        <!-- Info conducteur -->
+                        <div class="flex items-center">
+                            <div class="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 text-xl mr-4">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-gray-800">Leila Gharbi</h3>
+                                <div class="flex items-center">
+                                    <i class="fas fa-star text-yellow-400 mr-1 text-sm"></i>
+                                    <span class="text-gray-600 text-sm">4.9/5 • Peugeot 208</span>
+                                </div>
+                            </div>
                         </div>
-                        <div>
-                            <h3 class="font-bold text-gray-800">Leila Gharbi</h3>
-                            <div class="flex items-center">
-                                <i class="fas fa-star text-yellow-400 mr-1 text-sm"></i>
-                                <span class="text-gray-600 text-sm">4.9/5 • Peugeot 208</span>
+                        
+                        <!-- Badge Confirmé -->
+                        <div class="bg-[#90E861] text-[#3D9C10] font-medium py-1 px-4 rounded-full">
+                            Confirmé
+                        </div>
+                    </div>
+
+                    <!-- Trajet -->
+                    <div class="mb-6">
+                        <h4 class="font-bold text-gray-800 mb-3">Lac 1 → Ariana</h4>
+                        
+                        <!-- Détails date/heure -->
+                        <div class="flex flex-wrap gap-4 mb-4">
+                            <div class="flex items-center text-gray-600">
+                                <i class="fas fa-calendar mr-2"></i>
+                                <span>18 Déc 2023</span>
+                            </div>
+                            <div class="flex items-center text-gray-600">
+                                <i class="fas fa-clock mr-2"></i>
+                                <span>14:15</span>
+                            </div>
+                            <div class="flex items-center text-[#E74C3C]">
+                                <i class="fas fa-user mr-2"></i>
+                                <span>2 places</span>
                             </div>
                         </div>
                     </div>
-                    
-                    <!-- Badge Confirmé -->
-                    <div class="bg-[#90E861] text-[#3D9C10] font-medium py-1 px-4 rounded-full">
-                        Confirmé
-                    </div>
-                </div>
 
-                <!-- Trajet -->
-                <div class="mb-6">
-                    <h4 class="font-bold text-gray-800 mb-3">Lac 1 → Ariana</h4>
-                    
-                    <!-- Détails date/heure -->
-                    <div class="flex flex-wrap gap-4 mb-4">
-                        <div class="flex items-center text-gray-600">
-                            <i class="fas fa-calendar mr-2"></i>
-                            <span>18 Déc 2023</span>
+                    <!-- Boutons et prix -->
+                    <div class="flex justify-between items-center">
+                        <div class="flex gap-3">
+                            <button class="bg-[#6E57F0] text-white font-medium py-2 px-6 rounded-lg hover:opacity-90 transition">
+                                Voir les détails
+                            </button>
+                            <button class="bg-[#9E95CF] text-white font-medium py-2 px-6 rounded-lg hover:opacity-90 transition">
+                                Annuler
+                            </button>
                         </div>
-                        <div class="flex items-center text-gray-600">
-                            <i class="fas fa-clock mr-2"></i>
-                            <span>14:15</span>
+                        
+                        <div class="text-right">
+                            <p class="text-gray-600 text-sm">Prix</p>
+                            <p class="text-2xl font-bold text-gray-800">18 DT</p>
                         </div>
-                        <div class="flex items-center text-[#E74C3C]">
-                            <i class="fas fa-user mr-2"></i>
-                            <span>2 places</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Boutons et prix -->
-                <div class="flex justify-between items-center">
-                    <div class="flex gap-3">
-                        <button class="bg-[#6E57F0] text-white font-medium py-2 px-6 rounded-lg hover:opacity-90 transition">
-                            Voir les détails
-                        </button>
-                        <button class="bg-[#9E95CF] text-white font-medium py-2 px-6 rounded-lg hover:opacity-90 transition">
-                            Annuler
-                        </button>
-                    </div>
-                    
-                    <div class="text-right">
-                        <p class="text-gray-600 text-sm">Prix</p>
-                        <p class="text-2xl font-bold text-gray-800">18 DT</p>
                     </div>
                 </div>
             </div>

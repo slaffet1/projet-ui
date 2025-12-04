@@ -3,77 +3,301 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>COVOI+ - Covoiturage intelligent</title>
+    <title>COVOI+ - Accueil</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-        
-        body {
-            font-family: 'Inter', sans-serif;
-        }
-        
-        .card {
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-            transition: transform 0.3s ease;
-        }
-        
-        .card:hover {
-            transform: translateY(-2px);
-        }
-        
-        .gradient-bg {
-            background: linear-gradient(135deg, #3A208F 0%, #6E57F0 100%);
-        }
-        
-        .driver-badge {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        }
-        
-        .emergency-btn {
-            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-        }
-        
-        .share-btn {
-            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
-        }
-        
-        .status-dot {
-            width: 10px;
-            height: 10px;
-            border-radius: 50%;
-            display: inline-block;
-            margin-right: 8px;
-        }
-        
-        .status-active {
-            background-color: #10b981;
-            box-shadow: 0 0 10px #10b981;
-        }
-        
-        .checkbox-custom {
-            width: 20px;
-            height: 20px;
-            border-radius: 4px;
-            border: 2px solid #d1d5db;
-            cursor: pointer;
-        }
-        
-        .checkbox-custom:checked {
-            background-color: #3A208F;
-            border-color: #3A208F;
-        }
-    </style>
 </head>
-<body class="flex flex-col min-h-screen bg-gray-50">
+<body class="flex flex-col min-h-screen bg-gray-50 font-sans">
+    <!-- Bouton Support Client (position fixe en bas) -->
+    <a href="/src/alltemplates/elyess/supportclient.html" class="fixed bottom-6 right-6 bg-[#6B5DBB] text-white font-medium py-3 px-5 rounded-lg hover:opacity-90 transition z-50 shadow-lg flex items-center gap-2">
+        <i class="fas fa-headset"></i>
+        <span>Support client</span>
+    </a>
+
     <!-- NAVBAR - Chargée automatiquement -->
     <div id="navbar-placeholder"></div>
 
     <!-- CONTENU PRINCIPAL -->
     <main class="flex-grow p-4 md:p-6">
-        <div class="max-w-6xl mx-auto">
-            <!-- En-tête de la page -->
-          
+        <div class="max-w-7xl mx-auto">
+            <!-- En-tête avec titre et barre de recherche -->
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-8 gap-4">
+                <div>
+                    <h1 class="text-3xl font-bold text-gray-800 mb-2">Les covoiturages disponibles</h1>
+                    <p class="text-gray-600">Trouvez le trajet parfait pour vos déplacements</p>
+                </div>
+                
+                <!-- Barre de recherche -->
+                <div class="relative w-full md:w-64">
+                    <input type="text" placeholder="Rechercher un trajet..." 
+                           class="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#7966E5] focus:border-transparent">
+                    <i class="fas fa-search absolute left-3 top-3 text-gray-400"></i>
+                </div>
+            </div>
+
+            <!-- Section Recommandations -->
+            <div class="mb-10">
+                <h2 class="text-xl font-bold text-gray-800 mb-6">Recommandations pour vous</h2>
+                
+                <!-- Grille de 3 suggestions -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <!-- Suggestion 1 -->
+                    <div class="bg-[#4921CA] rounded-xl p-5 text-white shadow-lg">
+                        <!-- En-tête avec photo et note -->
+                        <div class="flex items-center mb-5">
+                            <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center text-[#4921CA] text-2xl font-bold mr-4">
+                                YB
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg">Yasser Ben Ali</h3>
+                                <div class="flex items-center mt-1">
+                                    <i class="fas fa-star text-yellow-400 mr-1"></i>
+                                    <i class="fas fa-star text-yellow-400 mr-1"></i>
+                                    <i class="fas fa-star text-yellow-400 mr-1"></i>
+                                    <i class="fas fa-star text-yellow-400 mr-1"></i>
+                                    <i class="fas fa-star text-yellow-400 mr-1"></i>
+                                    <span class="ml-2 text-sm">4.9/5</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Détails du trajet -->
+                        <div class="mb-6">
+                            <div class="flex justify-between items-center mb-3 pb-2 border-b border-white/20">
+                                <span class="text-white/90">Départ:</span>
+                                <span class="font-medium">Tunis Centre</span>
+                            </div>
+                            <div class="flex justify-between items-center mb-3 pb-2 border-b border-white/20">
+                                <span class="text-white/90">Destination:</span>
+                                <span class="font-medium">Lac 2</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-white/90">Prix:</span>
+                                <span class="text-xl font-bold">18 DT</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Bouton Réserver -->
+                        <button class="w-full bg-[#7966E5] text-white font-medium py-3 rounded-lg hover:opacity-90 transition">
+                            Réserver
+                        </button>
+                    </div>
+                    
+                    <!-- Suggestion 2 -->
+                    <div class="bg-[#4921CA] rounded-xl p-5 text-white shadow-lg">
+                        <!-- En-tête avec photo et note -->
+                        <div class="flex items-center mb-5">
+                            <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center text-[#4921CA] text-2xl font-bold mr-4">
+                                MS
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg">Mona Slim</h3>
+                                <div class="flex items-center mt-1">
+                                    <i class="fas fa-star text-yellow-400 mr-1"></i>
+                                    <i class="fas fa-star text-yellow-400 mr-1"></i>
+                                    <i class="fas fa-star text-yellow-400 mr-1"></i>
+                                    <i class="fas fa-star text-yellow-400 mr-1"></i>
+                                    <i class="fas fa-star-half-alt text-yellow-400 mr-1"></i>
+                                    <span class="ml-2 text-sm">4.7/5</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Détails du trajet -->
+                        <div class="mb-6">
+                            <div class="flex justify-between items-center mb-3 pb-2 border-b border-white/20">
+                                <span class="text-white/90">Départ:</span>
+                                <span class="font-medium">Ariana</span>
+                            </div>
+                            <div class="flex justify-between items-center mb-3 pb-2 border-b border-white/20">
+                                <span class="text-white/90">Destination:</span>
+                                <span class="font-medium">El Ghazela</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-white/90">Prix:</span>
+                                <span class="text-xl font-bold">15 DT</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Bouton Réserver -->
+                        <button class="w-full bg-[#7966E5] text-white font-medium py-3 rounded-lg hover:opacity-90 transition">
+                            Réserver
+                        </button>
+                    </div>
+                    
+                    <!-- Suggestion 3 -->
+                    <div class="bg-[#4921CA] rounded-xl p-5 text-white shadow-lg">
+                        <!-- En-tête avec photo et note -->
+                        <div class="flex items-center mb-5">
+                            <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center text-[#4921CA] text-2xl font-bold mr-4">
+                                KT
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg">Karim Trabelsi</h3>
+                                <div class="flex items-center mt-1">
+                                    <i class="fas fa-star text-yellow-400 mr-1"></i>
+                                    <i class="fas fa-star text-yellow-400 mr-1"></i>
+                                    <i class="fas fa-star text-yellow-400 mr-1"></i>
+                                    <i class="fas fa-star text-yellow-400 mr-1"></i>
+                                    <i class="far fa-star text-yellow-400 mr-1"></i>
+                                    <span class="ml-2 text-sm">4.2/5</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Détails du trajet -->
+                        <div class="mb-6">
+                            <div class="flex justify-between items-center mb-3 pb-2 border-b border-white/20">
+                                <span class="text-white/90">Départ:</span>
+                                <span class="font-medium">La Marsa</span>
+                            </div>
+                            <div class="flex justify-between items-center mb-3 pb-2 border-b border-white/20">
+                                <span class="text-white/90">Destination:</span>
+                                <span class="font-medium">Esprit Tunis</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-white/90">Prix:</span>
+                                <span class="text-xl font-bold">22 DT</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Bouton Réserver -->
+                        <button class="w-full bg-[#7966E5] text-white font-medium py-3 rounded-lg hover:opacity-90 transition">
+                            Réserver
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section Statistiques des dépenses -->
+            <div class="mb-10">
+                <h2 class="text-xl font-bold text-gray-800 mb-6">Statistiques des dépenses</h2>
+                
+                <div class="bg-[#7966E5] rounded-xl p-6 text-white shadow-lg">
+                    <div class="flex flex-col md:flex-row justify-between items-center">
+                        <div class="mb-6 md:mb-0 md:mr-8">
+                            <p class="text-lg font-medium mb-2">Économie réalisée</p>
+                            <p class="text-3xl font-bold">85 TND</p>
+                            <div class="flex items-center mt-3 text-sm">
+                                <div class="bg-white/20 rounded-full px-3 py-1 mr-3">
+                                    <span>Départ remont photo</span>
+                                </div>
+                                <div class="bg-white/20 rounded-full px-3 py-1">
+                                    <span>10 TND</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="text-center">
+                            <p class="text-lg font-medium mb-2">Budget mensuel prévu</p>
+                            <div class="bg-white/20 rounded-lg p-4 inline-block">
+                                <p class="text-2xl font-bold">200 TND</p>
+                            </div>
+                            <p class="text-sm mt-3 text-white/90">Souvenir, référent • 5 min</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section Covoiturages disponibles (exemples depuis l'image) -->
+            <div class="mb-10">
+                <h2 class="text-xl font-bold text-gray-800 mb-6">Autres covoiturages</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <!-- Covoiturage 1 -->
+                    <div class="bg-white rounded-xl p-5 shadow-md border border-gray-200">
+                        <div class="mb-4">
+                            <h3 class="font-bold text-lg text-gray-800 mb-1">Refraction-bar frei</h3>
+                            <div class="h-1 w-12 bg-[#7966E5] rounded-full"></div>
+                        </div>
+                        
+                        <div class="space-y-3 mb-6">
+                            <div>
+                                <p class="text-gray-600 text-sm mb-1">Départ:</p>
+                                <p class="font-medium">À définir</p>
+                            </div>
+                            <div>
+                                <p class="text-gray-600 text-sm mb-1">Destinations:</p>
+                                <p class="font-medium">Multiple</p>
+                            </div>
+                            <div>
+                                <p class="text-gray-600 text-sm mb-1">Prix:</p>
+                                <p class="font-bold text-lg">15 TND</p>
+                            </div>
+                            <div>
+                                <p class="text-gray-600 text-sm mb-1">Saison:</p>
+                                <p class="font-medium">Toute l'année</p>
+                            </div>
+                        </div>
+                        
+                        <button class="w-full bg-[#7966E5] text-white font-medium py-3 rounded-lg hover:opacity-90 transition">
+                            Voir détails
+                        </button>
+                    </div>
+                    
+                    <!-- Covoiturage 2 -->
+                    <div class="bg-white rounded-xl p-5 shadow-md border border-gray-200">
+                        <div class="mb-4">
+                            <h3 class="font-bold text-lg text-gray-800 mb-1">yasser/bar multimediatrice</h3>
+                            <div class="h-1 w-12 bg-[#7966E5] rounded-full"></div>
+                        </div>
+                        
+                        <div class="space-y-3 mb-6">
+                            <div>
+                                <p class="text-gray-600 text-sm mb-1">Départ:</p>
+                                <p class="font-medium">Centre ville</p>
+                            </div>
+                            <div>
+                                <p class="text-gray-600 text-sm mb-1">Destination:</p>
+                                <p class="font-medium">Technopôle</p>
+                            </div>
+                            <div>
+                                <p class="text-gray-600 text-sm mb-1">Prix:</p>
+                                <p class="font-bold text-lg">12 TND</p>
+                            </div>
+                            <div>
+                                <p class="text-gray-600 text-sm mb-1">Saison:</p>
+                                <p class="font-medium">Été</p>
+                            </div>
+                        </div>
+                        
+                        <button class="w-full bg-[#7966E5] text-white font-medium py-3 rounded-lg hover:opacity-90 transition">
+                            Voir détails
+                        </button>
+                    </div>
+                    
+                    <!-- Covoiturage 3 -->
+                    <div class="bg-white rounded-xl p-5 shadow-md border border-gray-200">
+                        <div class="mb-4">
+                            <h3 class="font-bold text-lg text-gray-800 mb-1">mohamed-canto bar adulte</h3>
+                            <div class="h-1 w-12 bg-[#7966E5] rounded-full"></div>
+                        </div>
+                        
+                        <div class="space-y-3 mb-6">
+                            <div>
+                                <p class="text-gray-600 text-sm mb-1">Départ:</p>
+                                <p class="font-medium">Nord Tunis</p>
+                            </div>
+                            <div>
+                                <p class="text-gray-600 text-sm mb-1">Destination:</p>
+                                <p class="font-medium">Sud Tunis</p>
+                            </div>
+                            <div>
+                                <p class="text-gray-600 text-sm mb-1">Prix:</p>
+                                <p class="font-bold text-lg">20 TND</p>
+                            </div>
+                            <div>
+                                <p class="text-gray-600 text-sm mb-1">Saison:</p>
+                                <p class="font-medium">Hiver</p>
+                            </div>
+                        </div>
+                        
+                        <button class="w-full bg-[#7966E5] text-white font-medium py-3 rounded-lg hover:opacity-90 transition">
+                            Voir détails
+                        </button>
+                    </div>
+                </div>
+            </div>
         </div>
     </main>
 
@@ -96,8 +320,8 @@
         }
 
         document.addEventListener('DOMContentLoaded', () => {
-            loadComponent('./common/navbar.html', 'navbar-placeholder');
-            loadComponent('./common/footer.html', 'footer-placeholder');
+            loadComponent('common/navbar.html', 'navbar-placeholder');
+            loadComponent('common/footer.html', 'footer-placeholder');
         });
     </script>
 </body>
