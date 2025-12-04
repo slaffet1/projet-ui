@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COVOI+ - Nouveau trajet</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="flex flex-col min-h-screen bg-white">
+
+    <!-- NAVBAR - Chargée automatiquement -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- CONTENU PRINCIPAL -->
+    <main class="flex-grow">
+
+        <!-- HEADER FONDU FOND VIOLET #9E95CF -->
+        <section class="bg-gradient-to-b from-[#9E95CF] to-[#C4B8E8] pt-12 pb-20">
+            <div class="max-w-5xl mx-auto text-center px-4">
+
+                <h1 class="text-3xl font-bold text-white mb-2">
+                    Bienvenue sur Covoiturage+
+                </h1>
+                <p class="text-white/90 mb-10">
+                    Trouvez votre trajet en quelques clics
+                </p>
+
+                <!-- INPUTS radius 30px -->
+                <div class="space-y-5">
+                    <div class="relative">
+                        <input type="text" placeholder="Départ"
+                               class="w-full py-3.5 pl-12 pr-4 rounded-[30px] bg-white text-gray-700 shadow-md outline-none focus:ring-2 focus:ring-[#7352D1]">
+                        <i class="fas fa-location-dot absolute left-5 top-1/2 -translate-y-1/2 text-[#5B3EBC]"></i>
+                    </div>
+
+                    <div class="relative">
+                        <input type="text" placeholder="Arriver"
+                               class="w-full py-3.5 pl-12 pr-4 rounded-[30px] bg-white text-gray-700 shadow-md outline-none focus:ring-2 focus:ring-[#7352D1]">
+                        <i class="fas fa-location-dot absolute left-5 top-1/2 -translate-y-1/2 text-yellow-500"></i>
+                    </div>
+
+                    <div class="relative">
+                        <input type="time" value="20:00"
+                               class="w-full py-3.5 pl-12 pr-4 rounded-[30px] bg-white text-gray-700 shadow-md outline-none focus:ring-2 focus:ring-[#7352D1]">
+                        <i class="fas fa-clock absolute left-5 top-1/2 -translate-y-1/2 text-[#5B3EBC]"></i>
+                    </div>
+                </div>
+
+                <!-- BOUTON RECHERCHER radius 30px -->
+                <button class="mt-7 bg-[#5B3EBC] text-white font-semibold px-14 py-3.5 rounded-[30px] shadow-lg hover:bg-[#4b2fb0] transition-all">
+                    Recherche
+                </button>
+
+            </div>
+        </section>
+
+        <!-- SECTION RESULTATS -->
+        <section class="bg-white pt-10 pb-24">
+            <div class="max-w-6xl mx-auto px-4">
+
+                <!-- TITRE TRAJETS DISPONIBLES -->
+                <div class="flex justify-between items-center mb-6">
+                    <h2 class="text-lg font-semibold text-gray-800">
+                        Trajets disponibles : <span class="font-bold">Tunis → Esprit • Aujourd'hui</span>
+                    </h2>
+
+                    <button class="text-white bg-[#7352D1] px-5 py-2.5 rounded-lg text-sm font-medium hover:bg-[#5B3EBC] transition-all shadow-md">
+                        <i class="fas fa-plus mr-1"></i> Ajouter conducteur
+                    </button>
+                </div>
+
+                <!-- STATS RECTANGLES - radius 10px - Séparées comme Figma -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-10">
+                    <!-- Trajet Disponible -->
+                    <div class="bg-gray-50 rounded-[10px] p-5 text-center">
+                        <p class="text-gray-500 text-sm mb-2">Trajet Disponible</p>
+                        <p class="font-bold text-gray-800 text-2xl">3</p>
+                    </div>
+                    
+                    <!-- Prix Moyen -->
+                    <div class="bg-gray-50 rounded-[10px] p-5 text-center">
+                        <p class="text-gray-500 text-sm mb-2">Prix Moyen</p>
+                        <p class="font-bold text-gray-800 text-2xl">7.4 TND</p>
+                    </div>
+                    
+                    <!-- Meilleur Prix -->
+                    <div class="bg-gray-50 rounded-[10px] p-5 text-center">
+                        <p class="text-gray-500 text-sm mb-2">Meilleur Prix</p>
+                        <p class="font-bold text-green-500 text-2xl">6.4 TND</p>
+                    </div>
+                    
+                    <!-- Tarif Étudiant -->
+                    <div class="bg-green-50 rounded-[10px] p-5 text-center">
+                        <p class="text-gray-500 text-sm mb-2">Tarif Étudiant</p>
+                        <p class="font-bold text-green-500 text-2xl">-2.4 TND</p>
+                    </div>
+                </div>
+
+                <!-- LISTE DES CONDUCTEURS -->
+                <div class="space-y-5">
+
+                    <!-- CARD CONDUCTEUR 1 - radius 22px -->
+                    <div class="border border-gray-200 rounded-[22px] p-5 shadow-sm bg-[#F2F2F2] hover:shadow-md transition-all">
+
+                        <div class="flex flex-col md:flex-row md:items-center justify-between mb-4">
+                            <!-- INFO CONDUCTEUR -->
+                            <div class="flex items-center gap-4 mb-4 md:mb-0">
+                                <img src="https://i.pravatar.cc/60" class="w-16 h-16 rounded-full" alt="Ahmed">
+
+                                <div>
+                                    <div class="flex items-center gap-2 mb-1">
+                                        <p class="font-bold text-gray-900 text-lg">Ahmed Bensalah</p>
+                                        <span class="bg-[#A18CFF] text-white text-xs px-2 py-0.5 rounded-md font-medium">
+                                            Vérifié
+                                        </span>
+                                    </div>
+                                    
+                                    <p class="text-sm text-gray-600 mb-2">⭐ 4.8★ Standard</p>
+                                    
+                                    <!-- BARRES DE PROGRESSION -->
+                                    <div class="flex flex-wrap gap-2 items-center">
+                                        <div class="flex items-center gap-1">
+                                            <div class="w-20 h-1.5 bg-[#A18CFF] rounded-full"></div>
+                                            <span class="text-xs text-gray-500">Réservation Instantanée</span>
+                                        </div>
+                                        <div class="flex items-center gap-1">
+                                            <div class="w-16 h-1.5 bg-[#E26A9D] rounded-full"></div>
+                                            <span class="text-xs text-gray-500">-10% Étudiant</span>
+                                        </div>
+                                        <div class="flex items-center gap-1">
+                                            <div class="w-16 h-1.5 bg-[#43CE78] rounded-full"></div>
+                                            <span class="text-xs text-gray-500">+10% Fidélité</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- PLACES ET HEURE -->
+                            <div class="text-gray-700 flex items-center gap-4 text-base">
+                                <span class="flex items-center gap-1">
+                                    <i class="fas fa-user"></i> 3 Places
+                                </span>
+                                <span class="flex items-center gap-1">
+                                    <i class="far fa-clock"></i> 20:45
+                                </span>
+                            </div>
+                        </div>
+
+                        <!-- BOUTONS -->
+                        <div class="flex flex-col sm:flex-row gap-3">
+                            <a  href ="../../alltemplates/emir/rembourssement.html" class="flex-1 bg-[#5B3EBC] text-white px-6 py-3 rounded-[30px] text-base font-semibold hover:bg-[#4b2fb0] transition-all">
+                                Réserver
+                            </a>
+
+                            <button class="flex-1 bg-[#9E95CF] text-white px-6 py-3 rounded-[30px] text-base font-semibold hover:bg-[#8679BE] transition-all">
+                                Contacter
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- CARD CONDUCTEUR 2 -->
+                    <div class="border border-gray-200 rounded-[22px] p-5 shadow-sm bg-[#F2F2F2] hover:shadow-md transition-all">
+
+                        <div class="flex flex-col md:flex-row md:items-center justify-between mb-4">
+                            <div class="flex items-center gap-4 mb-4 md:mb-0">
+                                <img src="https://i.pravatar.cc/61" class="w-16 h-16 rounded-full" alt="Amine">
+
+                                <div>
+                                    <div class="flex items-center gap-2 mb-1">
+                                        <p class="font-bold text-gray-900 text-lg">Amine ben ahmed</p>
+                                        <span class="bg-[#A18CFF] text-white text-xs px-2 py-0.5 rounded-md font-medium">
+                                            Vérifié
+                                        </span>
+                                    </div>
+                                    
+                                    <p class="text-sm text-gray-600 mb-2">⭐ 4.6★ Economy</p>
+                                    
+                                    <div class="flex flex-wrap gap-2 items-center">
+                                        <div class="flex items-center gap-1">
+                                            <div class="w-20 h-1.5 bg-[#A18CFF] rounded-full"></div>
+                                            <span class="text-xs text-gray-500">Réservation Instantanée</span>
+                                        </div>
+                                        <div class="flex items-center gap-1">
+                                            <div class="w-16 h-1.5 bg-[#E26A9D] rounded-full"></div>
+                                            <span class="text-xs text-gray-500">-10% Étudiant</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="text-gray-700 flex items-center gap-4 text-base">
+                                <span class="flex items-center gap-1">
+                                    <i class="fas fa-user"></i> 3 Places
+                                </span>
+                                <span class="flex items-center gap-1">
+                                    <i class="far fa-clock"></i> 20:45
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-col sm:flex-row gap-3">
+                            <button class="flex-1 bg-[#5B3EBC] text-white px-6 py-3 rounded-[30px] text-base font-semibold hover:bg-[#4b2fb0] transition-all">
+                                Réserver
+                            </button>
+
+                            <button class="flex-1 bg-[#9E95CF] text-white px-6 py-3 rounded-[30px] text-base font-semibold hover:bg-[#8679BE] transition-all">
+                                Contacter
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- CARD CONDUCTEUR 3 -->
+                    <div class="border border-gray-200 rounded-[22px] p-5 shadow-sm bg-[#F2F2F2] hover:shadow-md transition-all">
+
+                        <div class="flex flex-col md:flex-row md:items-center justify-between mb-4">
+                            <div class="flex items-center gap-4 mb-4 md:mb-0">
+                                <img src="https://i.pravatar.cc/62" class="w-16 h-16 rounded-full" alt="Flen">
+
+                                <div>
+                                    <div class="flex items-center gap-2 mb-1">
+                                        <p class="font-bold text-gray-900 text-lg">Flen ben falten</p>
+                                    </div>
+                                    
+                                    <p class="text-sm text-gray-600 mb-2">⭐ 4.6★ Economy</p>
+                                    
+                                    <div class="flex flex-wrap gap-2 items-center">
+                                        <div class="flex items-center gap-1">
+                                            <div class="w-20 h-1.5 bg-[#A18CFF] rounded-full"></div>
+                                            <span class="text-xs text-gray-500">Réservation Instantanée</span>
+                                        </div>
+                                        <div class="flex items-center gap-1">
+                                            <div class="w-16 h-1.5 bg-[#43CE78] rounded-full"></div>
+                                            <span class="text-xs text-gray-500">+10% Fidélité</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="text-gray-700 flex items-center gap-4 text-base">
+                                <span class="flex items-center gap-1">
+                                    <i class="fas fa-user"></i> 3 Places
+                                </span>
+                                <span class="flex items-center gap-1">
+                                    <i class="far fa-clock"></i> 20:45
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-col sm:flex-row gap-3">
+                            <button class="flex-1 bg-[#5B3EBC] text-white px-6 py-3 rounded-[30px] text-base font-semibold hover:bg-[#4b2fb0] transition-all">
+                                Réserver
+                            </button>
+
+                            <button class="flex-1 bg-[#9E95CF] text-white px-6 py-3 rounded-[30px] text-base font-semibold hover:bg-[#8679BE] transition-all">
+                                Contacter
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- BOUTON SIMULATEUR radius 30px -->
+                <div class="text-center mt-12">
+                    <button class="bg-[#7352D1] text-white px-12 py-3.5 rounded-[30px] font-semibold hover:bg-[#5B3EBC] transition-all shadow-lg">
+                        Simulateur
+                    </button>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER - Chargé automatiquement -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Script pour charger navbar et footer -->
+    <script>
+        async function loadComponent(file, elementId) {
+            try {
+                const response = await fetch(file);
+                if (!response.ok) {
+                    throw new Error(`Erreur lors du chargement de ${file}`);
+                }
+                const html = await response.text();
+                document.getElementById(elementId).innerHTML = html;
+            } catch (error) {
+                console.error('Erreur:', error);
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            loadComponent('../../common/navbar.html', 'navbar-placeholder');
+            loadComponent('../../common/footer.html', 'footer-placeholder');
+        });
+    </script>
+</body>
+</html>
