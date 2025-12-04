@@ -79,8 +79,8 @@ Fonctionnalités :
 ### Installation locale
 
 1. Cloner le projet
-git clone https://github.com/votre-equipe/covoi-plus.git
-cd covoi-plus
+git clone https://github.com/slaffet1/projet-ui.git
+cd projet-ui
 
 2. Structure des fichiers
 src/
@@ -213,4 +213,4 @@ Pour toute question concernant le projet :
 ---
 
 Dernière mise à jour : Décembre 2024
-Version du projet : 1.0.0
+Version du projet : 1.1.0
