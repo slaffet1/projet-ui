@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remboursement - COVOI+</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="min-h-screen flex flex-col bg-violet-200">
+    <!-- NAVBAR -->
+    <div id="navbar-placeholder"></div>
+    <!-- MAIN CONTENT -->
+    <main class="flex-grow flex justify-center items-center px-5 py-8">
+        <div class="w-full max-w-sm bg-white rounded-3xl shadow-2xl overflow-hidden">
+            <!-- Purple Header Section -->
+            <div class="bg-violet-600 px-6 py-5">
+                <h1 class="text-white font-semibold text-lg">Paiement par carte</h1>
+                <p class="text-white/80 text-xs">Confirmation de réservation</p>
+            </div>
+
+            <!-- Form Content -->
+            <div class="p-6">
+                <!-- Amount Section -->
+                <div class="bg-gray-100 rounded-xl text-center py-5 px-4 mb-6">
+                    <div class="text-xs text-gray-500 mb-1">Montant</div>
+                    <div class="text-3xl font-bold text-gray-900">50,00 TND</div>
+                </div>
+
+                <!-- Form -->
+                <form>
+                    <!-- E-mail -->
+                    <div class="mb-4">
+                        <label class="text-sm font-semibold text-gray-900 mb-1 block">E-mail</label>
+                        <p class="text-xs text-gray-500 mb-2">Adresse e-mail</p>
+                        <input 
+                            type="email" 
+                            placeholder="votre@mail.com" 
+                            class="w-full bg-white border border-gray-200 rounded-lg px-4 py-3 text-sm outline-none focus:border-violet-400 transition-colors"
+                        >
+                    </div>
+
+                    <!-- Détails de la carte -->
+                    <div class="mb-4">
+                        <label class="text-sm font-semibold text-gray-900 mb-1 block">Détails de la carte</label>
+                        <p class="text-xs text-gray-500 mb-2">Numéro de carte</p>
+                        <input 
+                            type="text" 
+                            placeholder="1234 5678 9012 3456" 
+                            class="w-full bg-white border border-gray-200 rounded-lg px-4 py-3 text-sm outline-none focus:border-violet-400 transition-colors mb-3"
+                        >
+                        
+                        <div class="flex gap-3">
+                            <div class="flex-1">
+                                <p class="text-xs text-gray-500 mb-2">Date d'expiration</p>
+                                <input 
+                                    type="text" 
+                                    placeholder="MM/AA" 
+                                    class="w-full bg-white border border-gray-200 rounded-lg px-4 py-3 text-sm outline-none focus:border-violet-400 transition-colors"
+                                >
+                            </div>
+                            <div class="flex-1">
+                                <p class="text-xs text-gray-500 mb-2">CVV</p>
+                                <input 
+                                    type="text" 
+                                    placeholder="123" 
+                                    class="w-full bg-white border border-gray-200 rounded-lg px-4 py-3 text-sm outline-none focus:border-violet-400 transition-colors"
+                                >
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Titulaire de la carte -->
+                    <div class="mb-4">
+                        <label class="text-sm font-semibold text-gray-900 mb-2 block">Titulaire de la carte</label>
+                        <input 
+                            type="text" 
+                            placeholder="Nom complet" 
+                            class="w-full bg-gray-100 border border-gray-200 rounded-lg px-4 py-3 text-sm outline-none focus:border-violet-400 transition-colors"
+                        >
+                    </div>
+
+                    <!-- Checkbox -->
+                    <div class="flex items-center gap-2 mb-6">
+                        <input 
+                            type="checkbox" 
+                            id="saveCard" 
+                            class="w-4 h-4 accent-violet-600"
+                        >
+                        <label for="saveCard" class="text-xs text-gray-600">Enregistrer cette carte</label>
+                    </div>
+
+                    <!-- Pay Button -->
+                    <button 
+                        type="submit" 
+                        class="w-full bg-violet-700 rounded-xl text-white font-bold py-4 text-sm transition-colors hover:bg-violet-800"
+                    >
+                        Payer 50,00 TND
+                    </button>
+                </form>
+            </div>
+
+            <!-- Share Button - Outside main card area -->
+            <div class="flex justify-center pb-6">
+                <button class="bg-violet-600 rounded-full text-white font-semibold px-8 py-3 text-sm transition-colors hover:bg-violet-700">
+                    Partager Les Frais
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <div id="footer-placeholder"></div>
+
+    <script>
+        async function loadComponent(file, elementId) {
+            try {
+                const response = await fetch(file);
+                if (!response.ok) {
+                    throw new Error(`HTTP ${response.status}`);
+                }
+                const html = await response.text();
+                document.getElementById(elementId).innerHTML = html;
+            } catch (error) {
+                console.error('Error loading component:', error);
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            loadComponent('../../common/navbar.html', 'navbar-placeholder');
+            loadComponent('../../common/footer.html', 'footer-placeholder');
+        });
+    </script>
+</body>
+</html>
